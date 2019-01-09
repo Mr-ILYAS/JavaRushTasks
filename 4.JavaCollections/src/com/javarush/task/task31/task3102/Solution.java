@@ -23,8 +23,8 @@ import java.util.stream.Collectors;
 public class Solution {
     public static List<String> getFileTree(String root) throws IOException {
         return Files.walk(Paths.get(root))
-                .filter(f -> !Files.isDirectory(f))
-                .map(f -> f.toFile().getAbsolutePath())
+                .filter(path -> !Files.isDirectory(path))
+                .map(path -> path.toFile().getAbsolutePath())
                 .collect(Collectors.toList());
     }
 

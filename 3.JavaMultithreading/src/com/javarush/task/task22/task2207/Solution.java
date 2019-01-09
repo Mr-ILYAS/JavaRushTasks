@@ -35,16 +35,16 @@ public class Solution {
     public static List<Pair> result = new LinkedList<>();
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        String s;
-        try (BufferedReader fileReader = new BufferedReader(new FileReader(reader.readLine()))) {
-            reader.close();
-            while ((s = fileReader.readLine()) != null) {
-                sb.append(s).append(" ");
-            }
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    StringBuilder sb = new StringBuilder();
+    String s;
+    try (BufferedReader fileReader = new BufferedReader(new FileReader(reader.readLine()))) {
+        reader.close();
+        while ((s = fileReader.readLine()) != null) {
+            sb.append(s).append(" ");
         }
-        String[] arr = sb.toString().trim().split("\\s+");
+    }
+    String[] arr = sb.toString().trim().split("\\s+");
         for (int i = 0; i < arr.length; i++) {
             for (int j = i+1; j < arr.length; j++) {
                 sb.setLength(0);

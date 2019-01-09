@@ -21,6 +21,6 @@ public class Solution {
         System.out.println(getCountSecondsPassedInCurrentHour(12345));
     }
     public static int getCountSecondsPassedInCurrentHour(int seconds) {
-        return seconds-(seconds/3600)*3600;
+        return seconds%3600;
     }
 }

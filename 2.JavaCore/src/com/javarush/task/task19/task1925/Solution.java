@@ -24,7 +24,7 @@ import java.io.*;
 public class Solution{
 	public static void main(String[] args) throws IOException{
 		BufferedReader fileReader=new BufferedReader(new FileReader(args[0]));
-		BufferedWriter writer=new BufferedWriter(new FileWriter(args[1]));
+		BufferedWriter fileWriter=new BufferedWriter(new FileWriter(args[1]));
 		StringBuilder sb=new StringBuilder();
 
 		while(fileReader.ready()) {
@@ -41,7 +41,7 @@ public class Solution{
 		}
 
 		sb.setLength(sb.length()-1);
-		writer.write(sb.toString());
-		writer.close();
+		fileWriter.write(sb.toString());
+		fileWriter.close();
 	}
 }
