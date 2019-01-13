@@ -30,9 +30,9 @@ public class Solution{
 	public static void main(String[] args) throws IOException{
 		BufferedReader reader=new BufferedReader(new InputStreamReader(new FileInputStream(new BufferedReader(new InputStreamReader(System.in)).readLine())));
 		String s;
-		while(reader.ready()){
-			s=reader.readLine();
-			if(s.matches("\\d+ .*"))if((s.split(" "))[0].equals(args[0]))System.out.println(s);
+		while((s=reader.readLine())!=null){
+			if(s.matches("\\d+ .*"))if((s.split(" "))[0].equals(args[0]))
+				System.out.println(s);
 		}
 		reader.close();
 	}

@@ -22,13 +22,18 @@ public class Solution{
 		String f2=reader.readLine();
 		FileInputStream inputStream1=new FileInputStream(f1);
 		FileInputStream inputStream2=new FileInputStream(f2);
+
 		byte[] dataf1=new byte[inputStream1.available()];
 		byte[] dataf2=new byte[inputStream2.available()];
+
 		if(inputStream1.available()>0)inputStream1.read(dataf1);
 		if(inputStream2.available()>0)inputStream2.read(dataf2);
+
 		OutputStream outputStream=new FileOutputStream(f1);
+
 		outputStream.write(dataf2);
 		outputStream.write(dataf1);
+
 		inputStream1.close();
 		inputStream2.close();
 		outputStream.close();
