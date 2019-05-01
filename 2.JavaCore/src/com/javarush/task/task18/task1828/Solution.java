@@ -40,8 +40,7 @@ public class Solution{
 		String f=new BufferedReader(new InputStreamReader(System.in)).readLine();
 		BufferedReader fileReader=new BufferedReader(new FileReader(f));
 		StringBuilder sb=new StringBuilder();
-		for(String s;fileReader.ready();){
-			s=fileReader.readLine();
+		for(String s; (s=fileReader.readLine())!=null; ){
 			if((s.substring(0,8).trim()).equals(args[1])){
 				if("-u".equals(args[0])){
 					sb.append(String.format("%-8.8s%-30.30s%-8.8s%-4.4s%n",args[1],args[2],args[3],args[4]));
