@@ -35,7 +35,6 @@ package com.javarush.task.task22.task2212;
 public class Solution {
     public static boolean checkTelNumber(String telNumber) {
         if (telNumber==null)return false;
-        String[] s="".split("[\\s]+");
         return telNumber.matches(""+
                     "("+
                         "\\+\\d{2}("+                   //+38
